@@ -11,4 +11,3 @@ def cursos(request):
 
 def contacto(request):
     return render(request,"contenido/contacto.html")
-
