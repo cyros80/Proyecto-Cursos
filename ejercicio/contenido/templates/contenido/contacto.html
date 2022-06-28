@@ -1,21 +1,70 @@
 {% extends "contenido/encabezado.html" %}
 
-{%block titulo%}Contacto{%endblock%}
+{%block titulo%}Formulario{%endblock%}
+{%block titulo2%}Formulario{%endblock%}
+
+{% block imagen%}
+	{%load static%}
+	{%static 'contenido/img/contacto.png'%}
+
+{%endblock%}	
+
 
 {% block contenido %}
-<h1> Contactanos!!! </h1>
-    <p>Nombre: <input type="text" name="nombre"> </p>
-    <p>Correo Electronico: <input type="text" name="correo"> </p>
-    <p>Elige un Curso: <p>
-        <select name="curso">
-            <option> Base de datos </option>
-            <option> Programacion </option>
-            <option> Animacion digital </option>
-            <option> Seguridad web </option>
-            <option> Hacking Etico </option>
-        </select>
-    </br>
-    
-    <p>Comentarios: </p> <p> <textarea cols="50" rows="10"></textarea> </p>
-    <p> <input type="Button" name="enviar" value="Enviar" /> </p>
-{%endblock%}    
+
+		<!-- Contenido Principal-->
+	 	<div class="page-content">
+
+
+			<!--Encabezdo -->
+			<div class="page-header">
+				<div class="page-title">
+					
+				    <h5>Ingresa la informacion que se te pide</h5></h3>
+				</div>
+
+				
+				
+			</div>
+			<!-- /Encabezado-->
+
+			<!-- Formulario -->
+			<form class="form-horizontal" action="#" role="form">
+	            <div class="panel panel-default">
+	                <div class="panel-body">
+
+				        <div class="form-floating mb-3">
+							<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+							<label for="floatingInput">Direccion E-Mail</label>
+						  </div>
+						  <div class="form-floating">
+							<input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+							<label for="floatingPassword">Contraseña</label>
+						  </div>
+						  <br>
+							<select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+							  <option selected>Selecciona una opcion</option>
+							  <option value="1">Base de datos.</option>
+							  <option value="2">Python</option>
+							  <option value="3">JavaScript</option>
+							</select>
+							
+						  </div>
+						  <br>
+						  <div class="form-floating">
+							<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+							<label for="floatingTextarea2">Comentarios: </label>
+						  </div>
+				        
+                        <div class="form-actions text-right">
+                        	<input type="submit" value="Enviar" class="btn btn-primary">
+                        </div>
+
+				    </div>
+				</div>
+			</form>
+		<!-- Fin del Formulario -->
+		</div>
+		<!-- /Contenido Principal-->
+
+{% endblock %}

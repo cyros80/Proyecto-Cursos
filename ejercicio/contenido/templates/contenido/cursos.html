@@ -1,15 +1,52 @@
 {% extends "contenido/encabezado.html" %}
 
 {%block titulo%}Cursos{%endblock%}
+{%block titulo2%}Cursos{%endblock%}
+
+{% block imagen%}
+	{%load static%}
+	{%static 'contenido/img/cursos.png'%}
+
+
+{%endblock%}	
+
 
 {% block contenido %}
-<h1> Nuestros cursos disponibles!!!! </h1>
-    <ol>
-        <li> Base de datos </li>
-        <li> Programacion </li>
-        <li> Redes </li>
-        <li> Animacion digital </li>
-        <li> Seguridad web </li>
-        <li> Hacking Etico </li>
-    </ol>
-{%endblock%}    
+
+		<!-- Contenido Principal-->
+	 	<div class="page-content">
+
+
+			<!--Encabezdo -->
+			<div class="page-header">
+				<div class="page-title">
+					
+				    <small>Estos son los cursos que tenemos disponibles.</small></h3>
+				</div>
+
+				
+				
+			</div>
+			<!-- /Encabezado-->
+
+			<!-- Formulario -->
+			<form class="form-horizontal" action="#" role="form">
+	            <div class="panel panel-default">
+	                <div class="panel-body">
+
+                        <ol>
+                            <li> Base de datos </li>
+                            <li> Programacion </li>
+                            <li> Redes </li>
+                            <li> Animacion digital </li>
+                            <li> Seguridad web </li>
+                            <li> Hacking Et
+
+				    </div>
+				</div>
+			</form>
+		<!-- Fin del Formulario -->
+		</div>
+		<!-- /Contenido Principal-->
+
+{% endblock %}
