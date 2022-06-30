@@ -30,17 +30,17 @@
     <thead>
         <tr>
             <th>Foto</th>
-            <th>Matricula</th>
             <th>Nombre</th>
-            <th>Carrera</th>
-            <th>Turno</th>
+            <th>Profesor</th>
+            <th>Categoria</th>
+            <th>Capitulos</th>
         </tr>
     </thead>
     <tbody>
         {%for curso in cursos %}
         <tr>
         <td class="text-center">
-        <img src="" alt="" class="img-media">
+        <img src="{{curso.imagen.url}}" alt="" class="img-media">
         </td>
         <td class="text-semibold">{{curso.nombre}}</td>
         <td class="muted">{{curso.profesor}}</td>
@@ -49,6 +49,7 @@
         </tr>
         {% endfor %}
         </tbody>
+
         </table>        
 </div>
 
