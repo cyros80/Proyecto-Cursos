@@ -1,0 +1,60 @@
+{% extends "contenido/encabezado.html" %}
+
+{%block titulo%}Principal{%endblock%}
+{%block titulo2%}Principal{%endblock%}
+
+{% block imagen%}
+	{%load static%}
+	{%static 'contenido/img/home.png'%}
+
+{%endblock%}	
+
+{% block contenido%}
+<!-- Contenido Principal-->
+<div class="page-content">
+<div>
+
+    			<!-- /Encabezado-->
+                <div class="container">
+                    <div class="jumbotron">
+                        <div class="page-header">
+                            <div class="page-title">
+                                
+                                <small>Aplicacion de Cursos hecha en clase </small></h3>
+                            </div>
+                    </div>
+                    
+                  </div>
+</div>
+<table class ="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Usuario</th>
+            <th>Comentario</th>
+            <th></th>
+            <th></th>
+            
+            
+        </tr>
+    </thead>
+    <tbody>
+        {%for comentario in comentarios %}
+        <tr>
+        
+        <td class="text-semibold">{{comentario.usuario}}</td>
+        <td class="muted">{{comentario.mensaje}}</td>
+        <td class="text-center">
+            <a href="{%url 'Eliminar' comentario.id%}">Eliminar</a>
+        </td>
+        <td class="text-center">
+            <a href="{%url 'ConsultaIndividual' comentario.id%}">Editar</a>
+        </td>
+        
+        </tr>
+        {% endfor %}
+        </tbody>
+
+        </table>        
+</div>
+
+{%endblock%}
